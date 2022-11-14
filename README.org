@@ -1,0 +1,24 @@
+#+Title: cfengine-code-style
+
+C code style for the [[https://github.com/cfengine/core][CFEngine project]], ref [[https://github.com/cfengine/core/blob/master/CONTRIBUTING.md][contribution guidelines]].
+
+* Usage
+
+To enable coding style for the current buffer:
+
+#+begin_example
+  M-x c-set-style cfengine
+#+end_example
+
+To enable coding style permanently, create file =.dir-locals.el= with the
+following contents in the directory with the source code:
+
+#+caption: .dir-locals.el
+#+begin_src emacs-lisp
+  ((c-mode . ((c-file-style . "cfengine"))))
+#+end_src
+
+* TODOs
+
+** TODO Special rule for C99 (Foo) { 1, 2, 3 } initializers
+** TODO Special rule for whitespace between if/while/for and parenthesis
